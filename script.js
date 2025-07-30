@@ -39,8 +39,10 @@ function generateQR() {
         correctLevel: QRCode.CorrectLevel.H
     });
     
-    // Show download button
-    document.getElementById('download-btn').classList.remove('hidden');
+    // Show download button with smooth transition
+    const downloadContainer = document.getElementById('download-container');
+    downloadContainer.classList.remove('opacity-0');
+    downloadContainer.classList.add('opacity-100');
 }
 
 // Save QR Code as PNG
